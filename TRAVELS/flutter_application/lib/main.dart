@@ -47,7 +47,15 @@ class _RootPageState extends State<Rootpage> {
     bottomNavigationBar: NavigationBar(
       destinations: const[
         NavigationDestination(icon: Icon(Icons.home),label: "Home"),
-        NavigationDestination(icon: Icon(Icons.book_rounded),label: "Ongoing"),],),
+        NavigationDestination(icon: Icon(Icons.book_rounded),label: "Ongoing"),],
+        
+        onDestinationSelected: (int index){
+          setState((){
+          currentPage=index;
+          });
+        },
+        selectedIndex: currentPage,
+      ),
     );
     
   }
