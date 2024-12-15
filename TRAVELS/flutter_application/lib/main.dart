@@ -44,7 +44,10 @@ class _RootPageState extends State<Rootpage> {
       backgroundColor: Colors.blue,
 
       ),
-    
+    bottomNavigationBar: NavigationBar(
+      destinations: const[
+        NavigationDestination(icon: Icon(Icons.home),label: "Home"),
+        NavigationDestination(icon: Icon(Icons.book_rounded),label: "Ongoing"),],),
     );
     
   }
