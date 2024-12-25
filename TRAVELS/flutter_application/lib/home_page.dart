@@ -10,25 +10,34 @@ class HomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center, // Center the buttons vertically
         children: [
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              // Add your reservation logic here
+            },
             style: ElevatedButton.styleFrom(
-              foregroundColor: Colors.white, backgroundColor: Colors.blue, // Text color
+              foregroundColor: Colors.white, // Text color
+              backgroundColor: Colors.blue, // Background color
             ),
             child: const Text("Reserve bus"),
           ),
           const SizedBox(height: 30), // Space between buttons
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              // Add your reservation logic here
+            },
             style: ElevatedButton.styleFrom(
-              foregroundColor: Colors.white, backgroundColor: Colors.green, // Text color
+              foregroundColor: Colors.white, // Text color
+              backgroundColor: Colors.green, // Background color
             ),
             child: const Text("Reserve plane"),
           ),
           const SizedBox(height: 30), // Space between buttons
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              // Add your reservation logic here
+            },
             style: ElevatedButton.styleFrom(
-              foregroundColor: Colors.white, backgroundColor: Colors.red, // Text color
+              foregroundColor: Colors.white, // Text color
+              backgroundColor: Colors.red, // Background color
             ),
             child: const Text("Reserve hotel"),
           ),
