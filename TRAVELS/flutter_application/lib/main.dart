@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/home_page.dart';
+import 'package:flutter_application/reservations.dart';
 
 void main() {
   runApp(const MyApp());
@@ -42,6 +43,9 @@ class _RootPageState extends State<Rootpage> {
     floatingActionButton: FloatingActionButton(
       onPressed: (){
         debugPrint("Action button pressed");
+        Navigator.of(context).push(MaterialPageRoute(builder: ( BuildContext context){
+          return const Reservations();
+        }));
       },
       child: Icon(Icons.arrow_right),
       backgroundColor: Colors.blue,
