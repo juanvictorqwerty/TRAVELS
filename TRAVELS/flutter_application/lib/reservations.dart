@@ -8,6 +8,9 @@ class Reservations extends StatefulWidget {
 }
 
 class _ReservationsState extends State<Reservations> {
+  // List to hold reservation items
+  List<String> reservations = []; // This can be empty
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,9 +18,18 @@ class _ReservationsState extends State<Reservations> {
         title: Text('Reservations'),
         backgroundColor: Colors.blue,
       ),
-      body: Center(
-        child: Text('No reservations yet!'),
-      ),
+      body: reservations.isEmpty
+          ? Center(
+              child: Text('No reservations yet!'),
+            )
+          : ListView.builder(
+              itemCount: reservations.length,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  title: Text(reservations[index]),
+                );
+              },
+            ),
     );
   }
 }
