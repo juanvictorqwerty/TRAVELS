@@ -13,6 +13,7 @@ class _ReservationsState extends State<Reservations> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Reservations'),
+        backgroundColor: Colors.blue,
       ),
       body: Center(
         child: Text('No reservations yet!'),
