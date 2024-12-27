@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart'; //always
+import 'bus_reservation.dart'; // Import the bus reservation page
+import 'plane_reservation.dart';
+import 'hotel_reservation.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -11,7 +14,10 @@ class HomePage extends StatelessWidget {
         children: [
           ElevatedButton(
             onPressed: () {
-              // Add your reservation logic here
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const BusReservation()), // Navigate to BusReservation
+              );
             },
             style: ElevatedButton.styleFrom(
               foregroundColor: Colors.white, // Text color
@@ -22,7 +28,10 @@ class HomePage extends StatelessWidget {
           const SizedBox(height: 30), // Space between buttons
           ElevatedButton(
             onPressed: () {
-              // Add your reservation logic here
+              Navigator.push( 
+                context,
+                MaterialPageRoute(builder: (context)=> const PlaneReservation()),// Add your reservation logic here
+              );
             },
             style: ElevatedButton.styleFrom(
               foregroundColor: Colors.white, // Text color
@@ -33,7 +42,10 @@ class HomePage extends StatelessWidget {
           const SizedBox(height: 30), // Space between buttons
           ElevatedButton(
             onPressed: () {
-              // Add your reservation logic here
+              Navigator.push( 
+                context,
+                MaterialPageRoute(builder: (context)=> const HotelReservation()),// Add your reservation logic here
+              );// Add your reservation logic here
             },
             style: ElevatedButton.styleFrom(
               foregroundColor: Colors.white, // Text color
