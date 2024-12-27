@@ -1,10 +1,18 @@
-import 'package:flutter/material.dart'; 
+import 'package:flutter/material.dart';
 
-class bus_reservation extends StatefulWidget {
+class BusReservation extends StatelessWidget {
+  const BusReservation({Key? key}) : super(key: key);
+
   @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    throw UnimplementedError();
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Bus Reservation"),
+        backgroundColor: Colors.blue,
+      ),
+      body: Center(
+        child: const Text("Bus Reservation Page"),
+      ),
+    );
   }
-
 }
