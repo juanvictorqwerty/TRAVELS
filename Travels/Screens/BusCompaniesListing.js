@@ -4,7 +4,7 @@ import React from 'react'
 export default function BusCompaniesListing() {
     return (
     <View>
-        <Text>BusCompaniesListing</Text>
+        <Text>BusCompanies    hListing</Text>
     </View>
     )
 }
