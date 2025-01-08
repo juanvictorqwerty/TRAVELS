@@ -11,7 +11,7 @@ export default HotelListing = () => {
             <Image source={require('../assets/Hotel_logos/Hotel-Hilton.jpg')} style={{ width: '100%', height: 100 }} />
             <Text style={{ textAlign: 'center'}}>Hotel Hilton</Text>
             <View style={{ marginBottom: 40 }}>
-                <Button title="Yaounde" />
+                <Button title="Yaounde 650565596" />
             </View>
 
             <Image source={require('../assets/Hotel_logos/hotel-mont-febe.jpg')} style={{ width: '100%', height: 100 }} />
