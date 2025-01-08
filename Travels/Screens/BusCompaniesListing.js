@@ -41,7 +41,7 @@ export default HotelListing = () => {
             <View style={style.header}>
                 <View style={{ paddingBottom: 20 }}>
                     <Text style={{ fontSize: 40, fontWeight: 'bold' }}>
-                        Hotels
+                        Buses
                     </Text>
                 </View>
             </View>
