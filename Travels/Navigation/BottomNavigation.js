@@ -1,12 +1,29 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React from 'react';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import HotelListing from '../Screens/HotelListing'
+import BusCompaniesListing from '../Screens/BusCompaniesListing';
+import AirlinesListing from '../Screens/AirlinesListing';
+
 
 export default function BottomNavigation() {
+    
+    const Tab = createBottomTabNavigator();
+
     return (
-    <View>
-        <Text>BottomNavigation</Text>
-    </View>
+        <Tab.Navigator screenOptions={{headerShown: false}}>
+            
+            <Tab.Screen name="Hotels" component={HotelListing} />
+            <Tab.Screen name="Buses" component={BusCompaniesListing} />
+            <Tab.Screen name="Airlines" component={AirlinesListing}/>
+        </Tab.Navigator>
     )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+    },
+
+})
