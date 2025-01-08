@@ -3,34 +3,35 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import COLORS from '../Constants/COLORS';
 
-export default HotelListing = () => {
+
+export default BusCompanieslListing = () => {
     
     const Cards = () => {
         return (
             <View style={{ padding: 10, margin: 10, backgroundColor: COLORS.lightGray, borderRadius: 10 }}>
-            <Image source={require('../assets/Hotel_logos/Hotel-Hilton.jpg')} style={{ width: '100%', height: 100 }} />
-            <Text style={{ textAlign: 'center'}}>Hotel Hilton</Text>
-            <View style={{ marginBottom: 40 }}>
-                <Button title="Yaounde" />
-            </View>
+        <Image source={require('../assets/BusCompanies_logos/Toursitque.jpg')} style={{ width: '100%', height: 200 }} />
+                <Text style={{ textAlign: 'center'}}>Touristique express</Text>
+                <View style={{ marginBottom: 40 }}>
+                    <Button title="Yaounde" />
+                </View>
 
-            <Image source={require('../assets/Hotel_logos/hotel-mont-febe.jpg')} style={{ width: '100%', height: 100 }} />
-            <Text style={{ textAlign: 'center'}}>Hotel Mont-Febe</Text>
-            <View style={{ marginBottom: 40 }}>
-                <Button title="Yaounde" />
-            </View>
+                <Image source={require('../assets/BusCompanies_logos/mentravel-logo.png')} style={{ width: '100%', height:200 }} />
+                <Text style={{ textAlign: 'center'}}>Men Travel</Text>
+                <View style={{ marginBottom: 40 }}>
+                    <Button title="Yaounde" />
+                </View>
 
-            <Image source={require('../assets/Hotel_logos/hotel-sawa.jpg')} style={{ width: '100%', height: 100 }} />
-            <Text style={{ textAlign: 'center'}}>Hotel Sawa</Text>
-            <View style={{ marginBottom: 40 }}>
-                <Button title="Douala" />
-            </View>
+                <Image source={require('../assets/BusCompanies_logos/United_Express.png')} style={{ width: '100%', height: 200 }} />
+                <Text style={{ textAlign: 'center'}}>United Express</Text>
+                <View style={{ marginBottom: 40 }}>
+                    <Button title="Douala" />
+                </View>
 
-            <Image source={require('../assets/Hotel_logos/krystal-palace.jpg')} style={{ width: '100%', height: 100 }} />
-            <Text style={{ textAlign: 'center'}}>Krystal Palace</Text>
-            <View style={{ marginBottom: 40 }}>
-                <Button title="Douala"/>
-            </View>
+                <Image source={require('../assets/BusCompanies_logos/General-express.jpeg')} style={{ width: '100%', height: 200 }} />
+                <Text style={{ textAlign: 'center'}}>General Express</Text>
+                <View style={{ marginBottom: 40 }}>
+                    <Button title="Douala" />
+                </View>
 
             </View>
         );
