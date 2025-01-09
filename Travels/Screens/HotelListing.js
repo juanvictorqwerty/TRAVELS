@@ -15,6 +15,9 @@ export default HotelListing = () => {
                 <Button title="Yaounde 650565596"
                     onPress={()=>Communications.web('https://www.hilton.com/fr/hotels/yaohitw-hilton-yaounde/')}
                 />
+                <Button title="Call"
+                    onPress={()=> Communications.phonecall('650565596', true)
+                } />
             </View>
 
             <Image source={require('../assets/Hotel_logos/hotel-mont-febe.jpg')} style={{ width: '100%', height: 200 }} />
