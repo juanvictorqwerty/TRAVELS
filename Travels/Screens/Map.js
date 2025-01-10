@@ -1,21 +1,25 @@
 import React from 'react';
-import MapView from 'react-native-maps';
 import { StyleSheet, View } from 'react-native';
+import { WebView } from 'react-native-webview';
 
-export default function App() {
+const Map = () => {
     return (
     <View style={styles.container}>
-        <MapView style={styles.map} />
+        <WebView 
+        source={{ uri: 'https://www.google.com/maps' }} 
+        style={styles.webview}
+        />
     </View>
     );
-}
+};
 
 const styles = StyleSheet.create({
     container: {
     flex: 1,
     },
-    map: {
-    width: '100%',
-    height: '100%',
+    webview: {
+    flex: 1,
     },
 });
+
+export default Map;
