@@ -26,6 +26,9 @@ export default HotelListing = () => {
                 <Button title="Yaounde"
                     onPress={()=> Communications.web('https://www.agoda.com/hotel-mont-febe_8/hotel/yaounde-cm.html?countryId=36&finalPriceView=1&isShowMobileAppPrice=false&cid=1904733&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2025-01-10&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=-1&showReviewSubmissionEntry=false&currencyCode=USD&isFreeOccSearch=false&los=1&searchrequestid=fc2a4480-5b3b-47a0-8a64-e4b9a5840d70&ds=mhdcfuaQ6xTw7ZWH')
                 } />
+                <Button title="Call"
+                    onPress={()=> Communications.phonecall('650565596', true)
+                } />
             </View>
 
             <Image source={require('../assets/Hotel_logos/hotel-sawa.jpg')} style={{ width: '100%', height: 200 }} />
@@ -34,6 +37,9 @@ export default HotelListing = () => {
                 <Button title="Website" 
                     onPress={()=>Communications.web('')}
                 />
+                <Button title="Call"
+                    onPress={()=> Communications.phonecall('650565596', true)
+                } />
             </View>
 
             <Image source={require('../assets/Hotel_logos/krystal-palace.jpg')} style={{ width: '100%', height: 200 }} />
@@ -42,6 +48,9 @@ export default HotelListing = () => {
                 <Button title="Douala"
                 onPress={()=> Communications.web('https://www.krystalpalacedouala.com/')}
                 />
+                <Button title="Call"
+                    onPress={()=> Communications.phonecall('650565596', true)
+                } />
             </View>
 
             </View>
