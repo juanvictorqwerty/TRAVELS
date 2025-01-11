@@ -6,7 +6,7 @@ const Map = () => {
     return (
     <View style={styles.container}>
         <WebView 
-        source={{ uri: 'https://www.google.com/maps' }} 
+        source={{ uri: 'https://www.bing.com/maps?cp=3.823149%7E11.755371&lvl=10.0' }} 
         style={styles.webview}
         />
     </View>
