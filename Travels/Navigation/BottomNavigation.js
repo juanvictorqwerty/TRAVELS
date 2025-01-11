@@ -11,7 +11,7 @@ export default function BottomNavigation() {
     const Tab = createBottomTabNavigator();
 
     return (
-        <Tab.Navigator screenOptions={{headerShown: false}}>
+        <Tab.Navigator >
             <Tab.Screen name='Map' component={Map}/>
             <Tab.Screen name="Hotels" component={HotelListing} />
             <Tab.Screen name="Buses" component={BusCompaniesListing} />
