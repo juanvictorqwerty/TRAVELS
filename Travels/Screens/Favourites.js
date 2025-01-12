@@ -1,7 +1,12 @@
+import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
 export default function Favourites() {
   return (
-    <div>Favourites</div>
+    <View>
+      <Text>Favourites</Text>
+    </View>
   )
 }
+
+const styles = StyleSheet.create({})
