@@ -5,6 +5,7 @@ import HotelListing from '../Screens/HotelListing'
 import BusCompaniesListing from '../Screens/BusCompaniesListing';
 import AirlinesListing from '../Screens/AirlinesListing';
 import Map from '../Screens/Map';
+import Ongoing from '../Screens/Ongoing';
 
 export default function BottomNavigation() {
     
@@ -16,6 +17,7 @@ export default function BottomNavigation() {
             <Tab.Screen name="Hotels" component={HotelListing} />
             <Tab.Screen name="Buses" component={BusCompaniesListing} />
             <Tab.Screen name="Airlines" component={AirlinesListing}/>
+            <Tab.Screen name="Ongoing" component={Ongoing}/>
         </Tab.Navigator>
     )
 }
