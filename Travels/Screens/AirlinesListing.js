@@ -61,13 +61,7 @@ export default Airlines_logos = () => {
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
-            <View style={style.header}>
-                <View style={{ paddingBottom: 20 }}>
-                    <Text style={{ fontSize: 40, fontWeight: 'bold' }}>
-                        Buses
-                    </Text>
-                </View>
-            </View>
+            
             <FlatList
                 data={[1]} // Dummy data for rendering cards
                 renderItem={Cards}
