@@ -14,8 +14,8 @@ export default function Favourites() {
         <Tab.Navigator
             screenOptions={{
                 tabBarLabelStyle: { fontSize: 14 },
-                tabBarStyle: { backgroundColor: '#6200EE' },
-                tabBarIndicatorStyle: { backgroundColor: 'white' },
+                tabBarStyle: { backgroundColor: '#ffff' },
+                tabBarIndicatorStyle: { backgroundColor: 'blue' },
             }}
         >
             <Tab.Screen name="Buses" component={BusCompaniesListing} />
