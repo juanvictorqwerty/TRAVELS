@@ -13,7 +13,7 @@ export default function Favourites() {
     return (
         <Tab.Navigator
             screenOptions={{
-                tabBarLabelStyle: { fontSize: 14 },
+                tabBarLabelStyle: { fontSize: 16 },
                 tabBarStyle: { backgroundColor: '#ffff' },
                 tabBarIndicatorStyle: { backgroundColor: 'blue' },
             }}
