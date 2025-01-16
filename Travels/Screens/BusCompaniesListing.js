@@ -12,39 +12,44 @@ export default BusCompanieslListing = () => {
         <Image source={require('../assets/BusCompanies_logos/Toursitque.jpg')} style={{ width: '100%', height: 200 }} />
                 <Text style={{ textAlign: 'center'}}>Touristique express</Text>
                 <View style={{ marginBottom: 40 }}>
-                    <Button title="Yaounde 650565596"
-                        onPress={()=>Communications.web('https://www.hilton.com/fr/hotels/yaohitw-hilton-yaounde/')}
+                    <Button title="Website"
+                        onPress={()=>Communications.web('https://www.touristique.cm/')}
                     />
                     <Button title="Call"
-                        onPress={()=> Communications.phonecall('650565596', true)
+                        onPress={()=> Communications.phonecall('+237 650 62 38 79', true)
                     } />
                 </View>
 
                 <Image source={require('../assets/BusCompanies_logos/mentravel-logo.png')} style={{ width: '100%', height:200 }} />
                 <Text style={{ textAlign: 'center'}}>Men Travel</Text>
                 <View style={{ marginBottom: 40 }}>
-                    <Button title="Yaounde" />
+                    <Button title="Website"
+                        onPress={()=>Communications.web('https://mentravel.cm/')}
+                    />
+                    <Button title="Call"
+                        onPress={()=> Communications.phonecall('+237 6 59 88 59 21', true)
+                    } />
                 </View>
 
                 <Image source={require('../assets/BusCompanies_logos/United_Express.png')} style={{ width: '100%', height: 200 }} />
                 <Text style={{ textAlign: 'center'}}>United Express</Text>
                 <View style={{ marginBottom: 40 }}>
-                    <Button title="Yaounde 650565596"
-                        onPress={()=>Communications.web('https://www.hilton.com/fr/hotels/yaohitw-hilton-yaounde/')}
+                    <Button title="Website"
+                        onPress={()=>Communications.web('https://www.unitedexpress.cm/fr/')}
                     />
                     <Button title="Call"
-                        onPress={()=> Communications.phonecall('650565596', true)
+                        onPress={()=> Communications.phonecall('+237 6 53 53 96 96', true)
                     } />
                 </View>
 
                 <Image source={require('../assets/BusCompanies_logos/General-express.jpeg')} style={{ width: '100%', height: 200 }} />
                 <Text style={{ textAlign: 'center'}}>General Express</Text>
                 <View style={{ marginBottom: 40 }}>
-                    <Button title="Yaounde 650565596"
-                        onPress={()=>Communications.web('https://www.hilton.com/fr/hotels/yaohitw-hilton-yaounde/')}
+                    <Button title="Website"
+                        onPress={()=>Communications.web('https://generalexpressvoyages.com/#/home')}
                     />
                     <Button title="Call"
-                        onPress={()=> Communications.phonecall('650565596', true)
+                        onPress={()=> Communications.phonecall('+237 6 98 16 80 50', true)
                     } />
                 </View>
 
