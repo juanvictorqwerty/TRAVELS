@@ -19,11 +19,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-        
-      }
+      },
+      "package": "com.juanvictorqwerty.Travels"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c879f706-7a8f-4824-94be-c4504980e649"
+      }
+    },
+    "owner": "juanvictorqwerty"
   }
 }
