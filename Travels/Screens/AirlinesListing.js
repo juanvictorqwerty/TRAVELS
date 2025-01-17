@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, SafeAreaView, FlatList, Image, Button } from 'r
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import COLORS from '../Constants/COLORS';
+import Communications from 'react-native-communications';
 
 
 export default Airlines_logos = () => {
