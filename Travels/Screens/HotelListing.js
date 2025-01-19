@@ -1,83 +1,101 @@
-import { StyleSheet, Text, View, SafeAreaView, FlatList, Image, Button } from 'react-native';
 import React from 'react';
-import Icon from 'react-native-vector-icons/FontAwesome5';
-import COLORS from '../Constants/COLORS';
+import { StyleSheet, Text, View, SafeAreaView, ScrollView, Image, Button } from 'react-native';
 import Communications from 'react-native-communications';
+import COLORS from '../Constants/COLORS';
 
-export default HotelListing = () => {
-    
-    const Cards = () => {
-        return (
-            <View style={{ padding: 10, margin: 10, backgroundColor: COLORS.lightGray, borderRadius: 10 }}>
-            <Image source={require('../assets/Hotel_logos/Hotel-Hilton.jpg')} style={{ width: '100%', height: 200 }} />
-            <Text style={{ textAlign: 'center'}}>Hotel Hilton</Text>
-            <View style={{ marginBottom: 40 }}>
-                <Button title="Website"
-                    onPress={()=>Communications.web('https://www.hilton.com/fr/hotels/yaohitw-hilton-yaounde/')}
-                />
-                <Button title="Call"
-                    onPress={()=> Communications.phonecall('650565596', true)
-                } />
+const hotels = [
+    {
+    name: "Hotel Hilton",
+    logo: require('../assets/Hotel_logos/Hotel-Hilton.jpg'),
+    website: 'https://www.hilton.com/fr/hotels/yaohitw-hilton-yaounde/',
+    phone: '650565596',
+    description: "Hotel Hilton Yaounde offers luxury accommodations, top-notch amenities, and an unmatched location in the heart of the city.",
+    },
+    {
+    name: "Hotel Mont-Febe",
+    logo: require('../assets/Hotel_logos/hotel-mont-febe.jpg'),
+    website: 'https://www.agoda.com/hotel-mont-febe_8/hotel/yaounde-cm.html',
+    phone: '+237 2 22 21 40 02',
+    description: "Nestled on the slopes of Mount Febe, this hotel provides stunning views, excellent hospitality, and modern facilities.",
+    },
+    {
+    name: "Lewat Hotel",
+    logo: require('../assets/Hotel_logos/lewat-hotel.png'),
+    website: 'http://lewat-hotel.com/fr',
+    phone: '+237 6 76 84 46 11',
+    description: "Lewat Hotel offers a cozy and comfortable stay with easy access to the city's business and cultural landmarks.",
+    },
+    {
+    name: "Krystal Palace",
+    logo: require('../assets/Hotel_logos/krystal-palace.jpg'),
+    website: 'https://www.krystalpalacedouala.com/',
+    phone: '+237 2 33 50 68 00',
+    description: "Krystal Palace in Douala delivers premium accommodations, fine dining, and state-of-the-art conference facilities.",
+    },
+];
+
+const HotelCard = ({ hotel }) => (
+    <View style={styles.card}>
+        <Image source={hotel.logo} style={styles.image} />
+        <Text style={styles.title}>{hotel.name}</Text>
+        <Text style={styles.description}>{hotel.description}</Text>
+        <View style={styles.actions}>
+            <Button title="Website" onPress={() => Communications.web(hotel.website)} />
+            <Button title="Call" onPress={() => Communications.phonecall(hotel.phone, true)} />
+        </View>
+    </View>
+);
+
+const HotelListing = () => (
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
+        <ScrollView>
+            <View style={styles.container}>
+                {hotels.map((hotel, index) => (
+                <HotelCard key={index} hotel={hotel} />
+                ))}
             </View>
+        </ScrollView>
+    </SafeAreaView>
+);
 
-            <Image source={require('../assets/Hotel_logos/hotel-mont-febe.jpg')} style={{ width: '100%', height: 200 }} />
-            <Text style={{ textAlign: 'center'}}>Hotel Mont-Febe</Text>
-            <View style={{ marginBottom: 40 }}>
-                <Button title="Yaounde"
-                    onPress={()=> Communications.web('https://www.agoda.com/hotel-mont-febe_8/hotel/yaounde-cm.html?countryId=36&finalPriceView=1&isShowMobileAppPrice=false&cid=1904733&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2025-01-10&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=-1&showReviewSubmissionEntry=false&currencyCode=USD&isFreeOccSearch=false&los=1&searchrequestid=fc2a4480-5b3b-47a0-8a64-e4b9a5840d70&ds=mhdcfuaQ6xTw7ZWH')
-                } />
-                <Button title="Call"
-                    onPress={()=> Communications.phonecall('+237 2 22 21 40 02', true)
-                } />
-            </View>
-
-            <Image source={require('../assets/Hotel_logos/lewat-hotel.png')} style={{ width: '100%', height: 200 }} />
-            <Text style={{ textAlign: 'center'}}>Lewat Hotel</Text>
-            <View style={{ marginBottom: 40 }}>
-                <Button title="Website" 
-                    onPress={()=>Communications.web('http://lewat-hotel.com/fr')}
-                />
-                <Button title="Call"
-                    onPress={()=> Communications.phonecall('+237 6 76 84 46 11', true)
-                } />
-            </View>
-
-            <Image source={require('../assets/Hotel_logos/krystal-palace.jpg')} style={{ width: '100%', height: 200 }} />
-            <Text style={{ textAlign: 'center'}}>Krystal Palace</Text>
-            <View style={{ marginBottom: 40 }}>
-                <Button title="Website"
-                onPress={()=> Communications.web('https://www.krystalpalacedouala.com/')}
-                />
-                <Button title="Call"
-                    onPress={()=> Communications.phonecall('+237 2 33 50 68 00', true)
-                } />
-            </View>
-
-            </View>
-        );
-    }
-
-    return (
-        <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
-            
-            <FlatList
-                data={[1]} // Dummy data for rendering cards
-                renderItem={Cards}
-                keyExtractor={(item) => item.toString()}
-            />
-        </SafeAreaView>
-    );
-}
-
-const style = StyleSheet.create({
-    header: {
-        marginTop: 35,
+const styles = StyleSheet.create({
+    container: {
+        padding: 10,
+        backgroundColor: 'gray',
+    },
+    card: {
+        padding: 10,
+        marginVertical: 10,
+        backgroundColor: 'white',
+        borderRadius: 10,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.3,
+        shadowRadius: 5,
+    },
+    image: {
+        width: '100%',
+        height: 200,
+        resizeMode: 'contain',
+        marginBottom: 10,
+    },
+    title: {
+        textAlign: 'center',
+        fontSize: 18,
+        fontWeight: 'bold',
+        marginBottom: 5,
+    },
+    description: {
+        textAlign: 'center',
+        fontSize: 14,
+        color: '#555',
+        marginBottom: 10,
+    },
+    actions: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        paddingHorizontal: 20,
-    },
-    Cards: {
-        elevation:16,
-        backgroundColor: COLORS.blue,
+        marginTop: 10,
     },
 });
+
+export default HotelListing;
